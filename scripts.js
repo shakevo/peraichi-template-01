@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('nav ul li a');
+    const links = document.querySelectorAll('section a');
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -11,6 +11,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 top: targetSection.offsetTop,
                 behavior: 'smooth'
             });
+        });
+    });
+
+    const accordionButtons = document.querySelectorAll('.accordion button');
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            this.setAttribute('aria-expanded', !expanded);
+
+            const content = this.nextElementSibling;
+            if (!expanded) {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
         });
     });
 });
