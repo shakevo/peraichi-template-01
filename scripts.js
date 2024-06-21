@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const links = document.querySelectorAll('section a');
+    // セクション内のページ内リンクを取得
+    const links = document.querySelectorAll('section a[href^="#"]');
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
