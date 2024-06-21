@@ -1,6 +1,7 @@
 /* bodyの基本スタイル */
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    /* font-family: 'Noto Sans JP', sans-serif;*/
+    font-family: "M PLUS 1", sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -45,10 +46,15 @@ main {
     padding: 2.5rem 2rem;
     text-align: center;
     margin-bottom: 2rem;
+
+    /* 枠で囲む */
+    border: 2px solid #999; /* 四角い枠, 色は薄めにする */
+    display: inline-block; /* コンテンツに合わせて枠の幅を調整 */
+    line-height: 1.1; /* 行間の調整 */
 }
 
 /* キャッチコピー内 H2のスタイル */
-#ccopy h2 {
+#ccopy h1 {
     font-size: 5rem;
     font-weight: 700;
     margin: 0;
@@ -63,11 +69,11 @@ section {
 
 section h2 {
     font-size: 2.0rem;
-    margin-top: 1rem;
+    margin-top: 4.5rem; /* 読みやすくするために少し大きめのマージンを取る */
 }
 section h3 {
     font-size: 1.2rem; /* h2よりする小さく */
-    margin-top: 1.5rem; /* 読みやすくするために少し大きめのマージンを取る */
+    margin-top: 3.5rem; /* 読みやすくするために少し大きめのマージンを取る */
 }
 
 section a {
